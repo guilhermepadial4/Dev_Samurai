@@ -22,5 +22,5 @@ document.body.innerHTML += `${formattedNumber} Is it Integer: ${wholeNumber}. <b
 document.body.innerHTML += `Is NAN: ${nanNumber}. <br/>`;
 document.body.innerHTML += `Rounding Down: ${roundingDown}. <br/>`;
 document.body.innerHTML += `Rounding Up: ${roundingUp}. <br/>`;
-document.body.innerHTML += `With Two Decimal Places: ${roundingUp}. <br/>`;
+document.body.innerHTML += `With Two Decimal Places: ${formattedDecimalValue}. <br/>`;
 
