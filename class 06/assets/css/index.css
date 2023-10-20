@@ -69,6 +69,7 @@ form input:focus {
 }
 
 form button {
+    width: 100.5%;
     border: none;
     background-color: var(--primary-color);
     color: #fff;
@@ -86,4 +87,9 @@ form button:hover {
 .result__parag {
     width: 61%;
     background-color: #1864ab;
+}
+
+.parag__error {
+    width: 30%;
+    background-color: #f03e3e;
 }

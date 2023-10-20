@@ -2,7 +2,8 @@ const scope = () => {
     const weightInput = document.querySelector('#weight__input');
     const heightInput = document.querySelector('#height__input');
     const btnCalc = document.querySelector('#btn__calc');
-    const resultParag = document.querySelector('#result__parag')
+    const resultParag = document.querySelector('#result__parag');
+    const resultParagError = document.querySelector('#result__parag-error');
 
     const calcImc = () => {
         let result = weightInput.value / (heightInput.value * heightInput.value);
@@ -25,10 +26,18 @@ const scope = () => {
         }
     }
 
+    const validationInput = () => {
+        if (weightInput.value > '600') {
+            resultParag.classList.add('parag__error');
+            resultParag.innerText = `Digite um peso válido!`;
+        }
+    }
+
     btnCalc.addEventListener('click', (evt) => {
         evt.preventDefault();
-        console.log(calcImc());
+        // console.log(calcImc());
         showResult();
+        validationInput();
     });
 }
 
