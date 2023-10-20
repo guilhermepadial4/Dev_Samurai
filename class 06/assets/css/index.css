@@ -82,3 +82,8 @@ form button {
 form button:hover {
     background-color: var(--primary-color-dark);
 }
+
+.result__parag {
+    width: 61%;
+    background-color: #1864ab;
+}
