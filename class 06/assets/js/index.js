@@ -37,7 +37,7 @@ const scope = () => {
         evt.preventDefault();
         // console.log(calcImc());
         showResult();
-        validationInput();
+        // validationInput();
     });
 }
 
