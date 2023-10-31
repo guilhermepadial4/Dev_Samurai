@@ -25,20 +25,19 @@ const mainScope = () => {
     btnStart.addEventListener('click', () => {
         clearInterval(timer);
         startClock();
-        clock.removeAttribute('class', 'pause_clock');
-        clock.setAttribute('class', 'clock')
+        clock.classList.remove('pause_clock');
     });
 
     btnPause.addEventListener('click', () => {
         clearInterval(timer);
-        clock.setAttribute('class', 'pause_clock');
+        clock.classList.add('pause_clock');
     });
 
     btnReset.addEventListener('click', () => {
         clearInterval(timer);
         clock.innerHTML = '00:00:00';
         seconds = 0;
-        clock.setAttribute('class', 'pause_clock');
+        clock.classList.remove('pause_clock');
     });
 }
 
