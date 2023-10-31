@@ -50,3 +50,16 @@ form button {
 form button:hover {
     background-color: var(--primary-color-dark);
 }
+
+.input__add_task {
+    display: block;
+    width: 95%;
+    margin-bottom: 10px;
+    font-size: 24px;
+    height: 30px;
+    padding: 0 20px;
+}
+
+.input__add_task:focus {
+    outline: 1px solid black;
+}
