@@ -25,6 +25,8 @@ const mainScope = () => {
     btnStart.addEventListener('click', () => {
         clearInterval(timer);
         startClock();
+        clock.removeAttribute('class', 'pause_clock');
+        clock.setAttribute('class', 'clock')
     });
 
     btnPause.addEventListener('click', () => {
