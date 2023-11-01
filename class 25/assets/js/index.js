@@ -21,13 +21,39 @@ const mainScope = () => {
         li.appendChild(btnClear);
     }
 
+    const saveTasks = () => {
+        const liTasks = tasks.querySelectorAll('li');
+        const listTask = [];
+
+        for (let task of liTasks) {
+            let taskText = task.innerText;
+            taskText = taskText.replace('Apagar', '').trim(); 
+            listTask.push(taskText);
+        }
+
+        const taskJson = JSON.stringify(listTask);
+        localStorage.setItem('tasks', taskJson);
+    }
+    
     const createText = (text) => {
         const li = createLi();
         li.innerText += text;        
         tasks.appendChild(li);
         clearInput();
         createBtnClear(li);
+        saveTasks();
     } 
+    
+    const addTaskSave = () => {
+        const tasks = localStorage.getItem('tasks');
+        const listOfTasks = JSON.parse(tasks);
+
+        for (let task of listOfTasks) {
+            createText(task)
+        }
+    }
+
+    addTaskSave();
 
     inputAddTask.addEventListener('keypress', (evt) => {
         if (evt.keyCode === 13) {
@@ -48,7 +74,7 @@ const mainScope = () => {
         
         if (el.classList.contains('clear')) {
             el.parentElement.remove();
-            // console.log(el.parentElement);
+            saveTasks();
         }
     });
 
