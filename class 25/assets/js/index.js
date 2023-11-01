@@ -43,6 +43,15 @@ const mainScope = () => {
         
     });
 
+    document.addEventListener('click', (evt) => {
+        const el = evt.target;
+        
+        if (el.classList.contains('clear')) {
+            el.parentElement.remove();
+            // console.log(el.parentElement);
+        }
+    });
+
 }
 
 mainScope();
