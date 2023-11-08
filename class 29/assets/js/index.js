@@ -1,14 +1,35 @@
 function createCalculator() {
     return {
         display: document.querySelector('#display'),
-        btnClear: document.querySelector('#btn__clear'),
+
+        start() {
+            this.clickButtons();
+        },
 
         clearDisplay() {
             this.display.value = '';
         },
 
-        start() {
-            this.clickButtons();
+        delOne() {
+            this.display.value = this.display.value.slice(0, -1);
+        },
+
+        resultCount(){
+            let count = this.display.value;
+
+            try {
+                count = eval(count);
+
+                if(!count) {
+                    alert('Conta inválida');
+                    return;
+                }
+
+                this.display.value = count;
+            } catch(err) {
+                alert('Conta inválida');
+                return;
+            }   
         },
 
         clickButtons() {
@@ -21,6 +42,14 @@ function createCalculator() {
 
                 if(el.classList.contains('btn__clear')) {
                     this.clearDisplay();
+                }
+
+                if(el.classList.contains('btn__del')) {
+                    this.delOne();
+                }
+
+                if(el.classList.contains('btn__eq')) {
+                    this.resultCount();
                 }
             });
         },
