@@ -18,16 +18,17 @@ function Camiseta(nome, preco, cor) {
 
 Camiseta.prototype = Object.create(Produto.prototype);
 
-function Caneca(nome, preco, material) {
+function Caneca(nome, preco, material, estoque) {
     Produto.call(this, nome, preco);
     this.material = material;
+    this.estoque = estoque;
 };
 
 Caneca.prototype = Object.create(Produto.prototype);
 
 const produto = new Produto('Escudo Corinthians', 1910);
 const camiseta = new Camiseta('Oversize CBUM', 333, 'preta');
-const caneca = new Caneca('Caneca 500ml', 33, 'Porcelana');
+const caneca = new Caneca('Caneca 500ml', 33, 'Porcelana', 53);
 
 console.log(produto);
 console.log(camiseta);
