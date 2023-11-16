@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Link JS -->
+    <script defer src="assets/js/index.js"></script>
+    <title>Validador de CPF</title>
+</head>
+
+<body>
+    <section id="section__container-result" class="section__container-result">
+        <h1>Validador de CPF</h1>
+
+    <section class="section__container-form">
+        <h1>Consulte seu CPF</h1>
+
+        <form action="/" class="form" method="post">
+            <label for="">CPF:</label>
+            <input type="text" id="weight__input" placeholder="000.000.000-00" required>
+
+            <button id="btn__calc">Consultar</button>
+
+            <p id="result__parag" class="result__parag"></p>
+            <p id="result__parag-error" class="result__parag"></p>
+        </form>
+    </section>
+</body>
+
+</html>
