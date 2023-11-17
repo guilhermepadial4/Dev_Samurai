@@ -85,11 +85,18 @@ form button:hover {
 }
 
 .result__parag {
-    width: 61%;
-    background-color: #1864ab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.parag__valid {
+    background-color: #099268;
+    color: #000;
 }
 
 .parag__error {
-    width: 30%;
     background-color: #f03e3e;
+    color: #000;
 }
