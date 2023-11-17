@@ -1,5 +1,5 @@
 const mainScope = () => {
-const form = document.querySelector('#weight__input');
+const form = document.querySelector('#input');
 const btn = document.querySelector('#btn__calc');
 
 btn.addEventListener('click', (evt) => {
