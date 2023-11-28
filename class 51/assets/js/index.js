@@ -12,7 +12,31 @@ class ValidaForm {
 
     handleSubmit(evt) {
         evt.preventDefault();
-        console.log('Formulário não enviado');
+        const fieldsCheck = this.checkFields();
+    }
+
+    checkFields() {
+        let valid = true;
+
+        for(let errorText of this.form.querySelectorAll('.error__text')) {
+            errorText.remove();
+        }
+
+        for(let field of this.form.querySelectorAll('.validate')) {
+            const label = field.previousElementSibling.innerText;
+            
+            if(!field.value) {
+                this.createError(field, `O campo "${label}" não pode estar em branco.`);
+                valid = false;
+            }
+        }
+    }
+
+    createError(field, msg) {
+        const div = document.createElement('div');
+        div.innerHTML = msg;
+        div.classList.add('error__text');
+        field.insertAdjacentElement('afterend', div);    
     }
 }
 

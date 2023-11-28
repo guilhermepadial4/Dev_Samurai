@@ -60,3 +60,8 @@ form button:hover {
     width: 40%;
     height: 2.5rem;
 }
+
+.error__text {
+    font-size: 18px;
+    color: #f03e3e;
+}
