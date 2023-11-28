@@ -43,11 +43,4 @@ class validatorCpf {
     }
 }
 
-const cpf1 = new validatorCpf('761.037.070-30');
-if (cpf1.valid()) {
-    console.log('CPF válido');
-} else {
-    console.log('CPF inválido');
-}
-
 export {validatorCpf};
